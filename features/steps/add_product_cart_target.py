@@ -20,7 +20,7 @@ def click_on_search(context):
 @when('Add to cart')
 def click_add_to_cart(context):
     context.driver.find_element(By.CSS_SELECTOR, "[data-test='addToCartButton']").click()
-    sleep(2)
+    sleep(5)
 
 
 @then('Verify {product} is added to cart')

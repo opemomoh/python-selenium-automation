@@ -41,4 +41,4 @@ target_benefit_verification_link = driver.find_element(By.CSS_SELECTOR, "[class*
 target_search_field = driver.find_element(By.CSS_SELECTOR, "[data-test='@web/Search/SearchInput']")
 target_search_button = driver.find_element(By.CSS_SELECTOR, "[data-test='@web/Search/SearchButton']")
 target_addtocart_button = driver.find_element(By.CSS_SELECTOR, "[data-test='addToCartButton']")
-target_addtocart_verification = driver.find_element(By.CSS_SELECTOR, "[data-test='modal-drawer-heading']")
+target_addtocart_verification = driver.find_element(By.CSS_SELECTOR, "[data-test='addToCartButton']")

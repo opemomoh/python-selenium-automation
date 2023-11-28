@@ -4,5 +4,5 @@ Feature: Test Scenarios for Search functionality
     Given Open Target page
     When Search for your table
     And Click on target search icon
-    And  Add to cart
+    And Add to cart
     Then Verify table is added to cart
