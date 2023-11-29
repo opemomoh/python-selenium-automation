@@ -17,13 +17,19 @@ def click_on_search(context):
     sleep(4)
 
 
+@when('Click product image')
+def click_prodict_image(context):
+    context.driver.find_element(By.CSS_SELECTOR, "picture[data-test*='ProductCard/ProductCardImage']").click()
+    sleep(5)
+
+
 @when('Add to cart')
 def click_add_to_cart(context):
-    context.driver.find_element(By.CSS_SELECTOR, "[data-test='addToCartButton']").click()
+    context.driver.find_element(By.CSS_SELECTOR, "[id*='addToCartButton']").click()
     sleep(5)
 
 
 @then('Verify {product} is added to cart')
 def verify_product_added_to_cart(context, product):
-    addedtocart_verification = context.driver.find_element(By.CSS_SELECTOR, "[data-test='modal-drawer-heading']")
-    assert "Added to cart" in addedtocart_verification
+    addedtocart_verification = context.driver.find_element(By.CSS_SELECTOR, ".h-text-lg").text
+    assert "Added to cart" in addedtocart_verification, f'Expected Added to cart but got {addedtocart_verification}'
