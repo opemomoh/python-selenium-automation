@@ -33,3 +33,4 @@ def click_add_to_cart(context):
 def verify_product_added_to_cart(context, product):
     addedtocart_verification = context.driver.find_element(By.CSS_SELECTOR, ".h-text-lg").text
     assert "Added to cart" in addedtocart_verification, f'Expected Added to cart but got {addedtocart_verification}'
+#test for my git push

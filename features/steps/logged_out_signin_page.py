@@ -3,10 +3,12 @@ from behave import given, when, then
 from time import sleep
 
 
+#@given('Open Target page')
+#def open_target(context):
+    #context.driver.get('https://www.target.com/')
 @given('Open Target page')
 def open_target(context):
-    context.driver.get('https://www.target.com/')
-
+    context.app.main_page.open_main()
 
 @when('Click on Sign in')
 def click_sign_in(context):
